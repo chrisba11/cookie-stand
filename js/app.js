@@ -36,9 +36,9 @@ var storeOne = {
 
       this.totalCookiesPerDay += numCookiesPerHour;
       this.cookieObject[storeHours[i]] = numCookiesPerHour;
-      var liTotal = document.createElement('li');
-      liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     }
+    var liTotal = document.createElement('li');
+    liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     ulElement.appendChild(liTotal);
 
     var h3Element = document.getElementById('store-one-heading');
@@ -74,9 +74,9 @@ var storeTwo = {
 
       this.totalCookiesPerDay += numCookiesPerHour;
       this.cookieObject[storeHours[i]] = numCookiesPerHour;
-      var liTotal = document.createElement('li');
-      liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     }
+    var liTotal = document.createElement('li');
+    liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     ulElement.appendChild(liTotal);
 
     var h3Element = document.getElementById('store-two-heading');
@@ -112,9 +112,9 @@ var storeThree = {
 
       this.totalCookiesPerDay += numCookiesPerHour;
       this.cookieObject[storeHours[i]] = numCookiesPerHour;
-      var liTotal = document.createElement('li');
-      liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     }
+    var liTotal = document.createElement('li');
+    liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     ulElement.appendChild(liTotal);
 
     var h3Element = document.getElementById('store-three-heading');
@@ -150,9 +150,9 @@ var storeFour = {
 
       this.totalCookiesPerDay += numCookiesPerHour;
       this.cookieObject[storeHours[i]] = numCookiesPerHour;
-      var liTotal = document.createElement('li');
-      liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     }
+    var liTotal = document.createElement('li');
+    liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     ulElement.appendChild(liTotal);
 
     var h3Element = document.getElementById('store-four-heading');
@@ -188,9 +188,9 @@ var storeFive = {
 
       this.totalCookiesPerDay += numCookiesPerHour;
       this.cookieObject[storeHours[i]] = numCookiesPerHour;
-      var liTotal = document.createElement('li');
-      liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     }
+    var liTotal = document.createElement('li');
+    liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     ulElement.appendChild(liTotal);
 
     var h3Element = document.getElementById('store-five-heading');
