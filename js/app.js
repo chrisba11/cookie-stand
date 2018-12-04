@@ -22,6 +22,7 @@ var storeOne = {
   maxCustPerHour: 65,
   avgCookiePerSale: 6.3,
   totalCookiesPerDay: 0,
+  cookieObject: {},
   randomNumberCookies: function(min, max, avg) {
     var num1 = max - min;
     var num2 = Math.random() * num1;
@@ -41,6 +42,8 @@ var storeOne = {
       this.totalCookiesPerDay += numCookiesPerHour;
       var liTotal = document.createElement('li');
       liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
+      this.cookieObject[storeHours[i]] = numCookiesPerHour;
+      console.log(this.cookieObject);
     }
     ulElement.appendChild(liTotal);
   },
