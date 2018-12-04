@@ -10,6 +10,13 @@ var storeOne = {
   avgCookiePerSale: 6.3,
   totalCookiesPerDay: 0,
   cookieObject: {},
+  // THE FUNCTION BELOW COULD BE WRITTEN USING THE FOLLOWING FUNCTIONS
+  // randomCustPerHour: function() {
+  //   return Math.round( Math.random(this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour );
+  // }
+  // averagePerHour: function() {
+  //   return Math.round( this.randomCustPerHour() * this.aveCookiePerSale )
+  // }
   randomNumberCookies: function(min, max, avg) {
     var num1 = max - min;
     var num2 = Math.random() * num1;
