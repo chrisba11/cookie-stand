@@ -39,17 +39,55 @@ var storeOne = {
       var numCookiesPerHour = this.randomNumberCookies(this.minCustPerHour, this.maxCustPerHour, this.avgCookiePerSale);
       liElement.textContent = `${storeHours[i]}: ${numCookiesPerHour} cookies`;
       ulElement.appendChild(liElement);
+
       this.totalCookiesPerDay += numCookiesPerHour;
+      this.cookieObject[storeHours[i]] = numCookiesPerHour;
       var liTotal = document.createElement('li');
       liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
-      this.cookieObject[storeHours[i]] = numCookiesPerHour;
-      console.log(this.cookieObject);
     }
     ulElement.appendChild(liTotal);
+
+    var h3Element = document.getElementById('storeOneHeading');
+    h3Element.textContent = this.name;
+  },
+};
+
+var storeTwo = {
+  name: 'SeaTac Airport',
+  minCustPerHour: 3,
+  maxCustPerHour: 24,
+  avgCookiePerSale: 1.2,
+  totalCookiesPerDay: 0,
+  cookieObject: {},
+  randomNumberCookies: function(min, max, avg) {
+    var num1 = max - min;
+    var num2 = Math.random() * num1;
+    var num3 = num2 + min;
+    var num4 = num3 * avg;
+    var num5 = Math.floor(num4);
+    return num5;
+  },
+  render: function() {
+    var ulElement = document.getElementById('storeTwo');
+
+    for(var i = 0; i < storeHours.length; i++) {
+      var liElement = document.createElement('li');
+      var numCookiesPerHour = this.randomNumberCookies(this.minCustPerHour, this.maxCustPerHour, this.avgCookiePerSale);
+      liElement.textContent = `${storeHours[i]}: ${numCookiesPerHour} cookies`;
+      ulElement.appendChild(liElement);
+
+      this.totalCookiesPerDay += numCookiesPerHour;
+      this.cookieObject[storeHours[i]] = numCookiesPerHour;
+      var liTotal = document.createElement('li');
+      liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
+    }
+    ulElement.appendChild(liTotal);
+
+    var h3Element = document.getElementById('storeTwoHeading');
+    h3Element.textContent = this.name;
   },
 };
 
 storeOne.render();
-
-
+storeTwo.render();
 
