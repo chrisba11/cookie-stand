@@ -26,7 +26,7 @@ var storeOne = {
     return num5;
   },
   render: function() {
-    var ulElement = document.getElementById('storeOne');
+    var ulElement = document.getElementById('store-one');
 
     for(var i = 0; i < storeHours.length; i++) {
       var liElement = document.createElement('li');
@@ -41,7 +41,7 @@ var storeOne = {
     }
     ulElement.appendChild(liTotal);
 
-    var h3Element = document.getElementById('storeOneHeading');
+    var h3Element = document.getElementById('store-one-heading');
     h3Element.textContent = this.name;
   },
 };
@@ -64,7 +64,7 @@ var storeTwo = {
     return num5;
   },
   render: function() {
-    var ulElement = document.getElementById('storeTwo');
+    var ulElement = document.getElementById('store-two');
 
     for(var i = 0; i < storeHours.length; i++) {
       var liElement = document.createElement('li');
@@ -79,7 +79,7 @@ var storeTwo = {
     }
     ulElement.appendChild(liTotal);
 
-    var h3Element = document.getElementById('storeTwoHeading');
+    var h3Element = document.getElementById('store-two-heading');
     h3Element.textContent = this.name;
   },
 };
@@ -102,7 +102,7 @@ var storeThree = {
     return num5;
   },
   render: function() {
-    var ulElement = document.getElementById('storeThree');
+    var ulElement = document.getElementById('store-three');
 
     for(var i = 0; i < storeHours.length; i++) {
       var liElement = document.createElement('li');
@@ -117,7 +117,7 @@ var storeThree = {
     }
     ulElement.appendChild(liTotal);
 
-    var h3Element = document.getElementById('storeThreeHeading');
+    var h3Element = document.getElementById('store-three-heading');
     h3Element.textContent = this.name;
   },
 };
@@ -140,7 +140,7 @@ var storeFour = {
     return num5;
   },
   render: function() {
-    var ulElement = document.getElementById('storeFour');
+    var ulElement = document.getElementById('store-four');
 
     for(var i = 0; i < storeHours.length; i++) {
       var liElement = document.createElement('li');
@@ -155,7 +155,7 @@ var storeFour = {
     }
     ulElement.appendChild(liTotal);
 
-    var h3Element = document.getElementById('storeFourHeading');
+    var h3Element = document.getElementById('store-four-heading');
     h3Element.textContent = this.name;
   },
 };
@@ -178,7 +178,7 @@ var storeFive = {
     return num5;
   },
   render: function() {
-    var ulElement = document.getElementById('storeFive');
+    var ulElement = document.getElementById('store-five');
 
     for(var i = 0; i < storeHours.length; i++) {
       var liElement = document.createElement('li');
@@ -193,7 +193,7 @@ var storeFive = {
     }
     ulElement.appendChild(liTotal);
 
-    var h3Element = document.getElementById('storeFiveHeading');
+    var h3Element = document.getElementById('store-five-heading');
     h3Element.textContent = this.name;
   },
 };
