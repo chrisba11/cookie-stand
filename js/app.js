@@ -21,7 +21,7 @@ var storeOne = {
   minCustPerHour: 23,
   maxCustPerHour: 65,
   avgCookiePerSale: 6.3,
-  totalCookiesPerDay: 0
+  totalCookiesPerDay: 0,
   randomNumberCookies: function(min, max, avg) {
     var num1 = max - min;
     var num2 = Math.random() * num1;
@@ -35,12 +35,14 @@ var storeOne = {
 
     for(var i = 0; i < storeHours.length; i++) {
       var liElement = document.createElement('li');
-      liElement.textContent = `${storeHours[i]}: ${this.randomNumberCookies(this.minCustPerHour, this.maxCustPerHour, this.avgCookiePerSale)} cookies`;
+      var numCookiesPerHour = this.randomNumberCookies(this.minCustPerHour, this.maxCustPerHour, this.avgCookiePerSale);
+      liElement.textContent = `${storeHours[i]}: ${numCookiesPerHour} cookies`;
       ulElement.appendChild(liElement);
-      this.totalCookiesPerDay += 6;
+      this.totalCookiesPerDay += numCookiesPerHour;
+      var liTotal = document.createElement('li');
       liTotal.textContent = `Total: ${this.totalCookiesPerDay}`;
     }
-    ulElement.appendChild(liTotal)
+    ulElement.appendChild(liTotal);
   },
 };
 
