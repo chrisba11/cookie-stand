@@ -54,13 +54,16 @@ StoreBuilder.renderHeader = function() {
 
 StoreBuilder.renderFooter = function() {
   var totalRow = document.createElement('tr');
+  var tdElement = document.createElement('td');
+  tdElement.textContent = 'Hourly Totals';
+  totalRow.appendChild(tdElement);
+  cookieTable.appendChild(totalRow);
 
   for(var i = -1; i < storeHours.length; i++) {
     var thElement = document.createElement('td');
     thElement.textContent = 'X';
     totalRow.appendChild(thElement);
   }
-  cookieTable.appendChild(totalRow);
 };
 
 
