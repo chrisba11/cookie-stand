@@ -7,7 +7,7 @@ var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2p
 // STORE CONSTRTUCTOR FUNCTION
 
 function StoreBuilder(name, min, max, avg) {
-  this.name = name;
+  this.storeName = name;
   this.minCustPerHour = min;
   this.maxCustPerHour = max;
   this.avgCookiePerSale = avg;
@@ -19,15 +19,16 @@ function StoreBuilder(name, min, max, avg) {
 StoreBuilder.allStores = [];
 
 // render table of random numbers for each hour to DOM
+
 StoreBuilder.prototype.render = function() {
   var trElement = document.createElement('tr');
   var tdElement = document.createElement('td');
-  tdElement.textContent = this.name;
+  tdElement.textContent = this.storeName;
   trElement.appendChild(tdElement);
   cookieTable.appendChild(trElement);
 
   for(var i = 0; i < storeHours.length; i++) {
-    var randomNumberCookies = Math.floor( (Math.floor( Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour )) * this.avgCookiePerSale);
+    var randomNumberCookies = Math.floor( (Math.floor( Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour) ) * this.avgCookiePerSale );
 
     tdElement = document.createElement('td');
     tdElement.textContent = randomNumberCookies;
@@ -37,6 +38,7 @@ StoreBuilder.prototype.render = function() {
 };
 
 // render header to DOM
+
 StoreBuilder.renderHeader = function() {
   var headerRow = document.createElement('tr');
 
@@ -49,6 +51,7 @@ StoreBuilder.renderHeader = function() {
 };
 
 // render total footer row to DOM
+
 StoreBuilder.renderFooter = function() {
   var totalRow = document.createElement('tr');
 
