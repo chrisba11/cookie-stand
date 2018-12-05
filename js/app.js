@@ -59,7 +59,7 @@ StoreBuilder.renderFooter = function() {
   totalRow.appendChild(tdElement);
   cookieTable.appendChild(totalRow);
 
-  for(var i = -1; i < storeHours.length; i++) {
+  for(var i = 0; i < storeHours.length; i++) {
     var thElement = document.createElement('td');
     thElement.textContent = 'X';
     totalRow.appendChild(thElement);
