@@ -3,7 +3,7 @@
 var cookieTable = document.getElementById('cookies');
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var newCookieForm = document.getElementById('new-store');
-// var totalCookies = [];
+
 
 // STORE CONSTRTUCTOR FUNCTION
 
@@ -51,6 +51,14 @@ StoreBuilder.renderHeader = function() {
   cookieTable.prepend(headerRow);
 };
 
+// render all stores to DOM
+
+StoreBuilder.renderAllStores = function() {
+  for(var i = 0; i < StoreBuilder.allStores.length; i++) {
+    StoreBuilder.allStores[i].render();
+  }
+};
+
 // render total footer row to DOM
 
 StoreBuilder.renderFooter = function() {
@@ -64,31 +72,26 @@ StoreBuilder.renderFooter = function() {
     var thElement = document.createElement('td');
     thElement.textContent = 'X';
     totalRow.appendChild(thElement);
+    console.log(i);
   }
 };
 
 
+new StoreBuilder('1st & Pike', 23, 65, 6.3);
+new StoreBuilder('SeaTac Airport', 3, 24, 1.2);
+new StoreBuilder('Seattle Center', 11, 38, 3.7);
+new StoreBuilder('Capitol Hill', 20, 38, 2.3);
+new StoreBuilder('Alki', 2, 16, 4.6);
 
-
-
-
-var firstAndPike = new StoreBuilder('1st & Pike', 23, 65, 6.3);
-var seaTacAirport = new StoreBuilder('SeaTac Airport', 3, 24, 1.2);
-var seattCenter = new StoreBuilder('Seattle Center', 11, 38, 3.7);
-var capitolHill = new StoreBuilder('Capitol Hill', 20, 38, 2.3);
-var alki = new StoreBuilder('Alki', 2, 16, 4.6);
 
 StoreBuilder.renderHeader();
-firstAndPike.render();
-seaTacAirport.render();
-seattCenter.render();
-capitolHill.render();
-alki.render();
+StoreBuilder.renderAllStores();
 StoreBuilder.renderFooter();
 
 
-for(var x = 0; x < StoreBuilder.allStores.length; x++) {
-  for(var y = 0; y < StoreBuilder.allStores[x].cookiesPerHour.length; y++) {
-    console.log(StoreBuilder.allStores.cookiesPerHour[y]);
-  }
-}
+
+// for(var x = 0; x < StoreBuilder.allStores.length; x++) {
+//   for(var y = 0; y < StoreBuilder.allStores[x].cookiesPerHour.length; y++) {
+//     console.log(StoreBuilder.allStores.cookiesPerHour[y]);
+//   }
+// }
