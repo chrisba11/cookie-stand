@@ -17,12 +17,7 @@ function StoreBuilder(name, min, max, avg) {
 
 StoreBuilder.allStores = [];
 
-// StoreBuilder.prototype.randomNumberCookies = function() {
-//   var randomNumberCust = Math.floor( Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour );
-//   console.log(Math.floor(randomNumberCust * this.avgCookiePerSale));
-//   return Math.floor(randomNumberCust * this.avgCookiePerSale);
-// };
-
+// render table of random numbers for each hour to DOM
 StoreBuilder.prototype.render = function() {
   var trElement = document.createElement('tr');
   var tdElement = document.createElement('td');
@@ -30,18 +25,18 @@ StoreBuilder.prototype.render = function() {
   trElement.appendChild(tdElement);
   cookieTable.appendChild(trElement);
 
-  // for each hour, create a new td with a random number of cookies
   for(var i = 0; i < storeHours.length; i++) {
     var randomNumberCookies = Math.floor( (Math.floor( Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour )) * this.avgCookiePerSale);
 
     tdElement = document.createElement('td');
     tdElement.textContent = randomNumberCookies;
     trElement.appendChild(tdElement);
-    this.totalCookiesPerDay += randomNumberCookies;
     this.cookieObject[storeHours[i]] = randomNumberCookies;
+    console.log(this.cookieObject);
   }
 };
 
+// render header to DOM
 StoreBuilder.renderHeader = function() {
   var headerRow = document.createElement('tr');
 
@@ -53,16 +48,17 @@ StoreBuilder.renderHeader = function() {
   cookieTable.prepend(headerRow);
 };
 
-// StoreBuilder.renderFooter = function() {
-//   var totalRow = document.createElement('tr');
+// render total footer row to DOM
+StoreBuilder.renderFooter = function() {
+  var totalRow = document.createElement('tr');
 
-//   for(var i = -1; i < storeHours.length; i++) {
-//     var thElement = document.createElement('td');
-//     thElement.textContent = ;
-//     totalRow.appendChild(thElement);
-//   }
-//   cookieTable.appendChild(totalRow);
-// };
+  for(var i = -1; i < storeHours.length; i++) {
+    var thElement = document.createElement('td');
+    thElement.textContent = 'X';
+    totalRow.appendChild(thElement);
+  }
+  cookieTable.appendChild(totalRow);
+};
 
 var firstAndPike = new StoreBuilder('1st & Pike', 23, 65, 6.3);
 var seaTacAirport = new StoreBuilder('SeaTac Airport', 3, 24, 1.2);
@@ -77,6 +73,9 @@ seattCenter.render();
 capitolHill.render();
 alki.render();
 StoreBuilder.renderFooter();
+
+// console.log(totalCookies);
+console.log(StoreBuilder.allStores);
 
 
 
