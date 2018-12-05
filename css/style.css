@@ -1,0 +1,23 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: rgb(134, 131, 114)
+}
+
+table {
+  border: 4px;
+
+}
+
+td {
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid rgb(84, 93, 119)
+}
+
+th {
+  background-color: rgb(rgb(177, 130, 59), green, blue);
+  color: rgb(rgb(79, 89, 100), green, blue)
+}
