@@ -96,20 +96,18 @@ Store.renderFooter = function() {
   totalRow.appendChild(tdElement);
   cookieTable.appendChild(totalRow);
 
+  var grandTotal = 0;
   for(var x = 0; x < storeHours.length; x++) {
     var counter = 0;
     for(var y = 0; y < Store.allStores.length; y++) {
       counter += Store.allStores[y].cookiesPerHour[x];
     }
+    grandTotal += counter;
     tdElement = document.createElement('td');
     tdElement.textContent = counter;
     totalRow.appendChild(tdElement);
   }
 
-  var grandTotal = 0;
-  for(var i = 0; i < grandTotalArray.length; i++) {
-    grandTotal += grandTotalArray[i];
-  }
   tdElement = document.createElement('td');
   tdElement.textContent = grandTotal;
   totalRow.appendChild(tdElement);
