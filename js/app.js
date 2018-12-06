@@ -16,9 +16,13 @@ function Store(name, min, max, avg) {
   this.avgCookiePerSale = avg;
   this.totalCookiesPerDay = 0;
   this.cookiesPerHour = [];
+  for(var i = 0; i < storeHours.length; i++) {
+    var randomNumberCookies = Math.floor( (Math.floor( Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour) ) * this.avgCookiePerSale );
+    this.cookiesPerHour.push(randomNumberCookies);
+    this.totalCookiesPerDay += randomNumberCookies;
+  }
   Store.allStores.push(this);
 }
-
 
 // add new store to table
 
@@ -38,7 +42,7 @@ Store.newStore = function(event) {
   Store.renderFooter();
 };
 
-// render table of random numbers for each hour to DOM
+// render table of random numbers from cookiesPerHour array and totalCookiesPerDay to DOM
 
 Store.prototype.render = function() {
   var trElement = document.createElement('tr');
@@ -46,16 +50,11 @@ Store.prototype.render = function() {
   tdElement.textContent = this.storeName;
   trElement.appendChild(tdElement);
   cookieTable.appendChild(trElement);
-  this.totalCookiesPerDay = 0;
 
   for(var i = 0; i < storeHours.length; i++) {
-    var randomNumberCookies = Math.floor( (Math.floor( Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour) ) * this.avgCookiePerSale );
-
     tdElement = document.createElement('td');
-    tdElement.textContent = randomNumberCookies;
+    tdElement.textContent = this.cookiesPerHour[i];
     trElement.appendChild(tdElement);
-    this.cookiesPerHour.push(randomNumberCookies);
-    this.totalCookiesPerDay += randomNumberCookies;
   }
 
   tdElement = document.createElement('td');
@@ -121,14 +120,8 @@ new Store('Seattle Center', 11, 38, 3.7);
 new Store('Capitol Hill', 20, 38, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
-
 Store.renderHeader();
 Store.renderAllStores();
 Store.renderFooter();
 
 newCookieForm.addEventListener('submit', Store.newStore);
-
-
-
-
-
