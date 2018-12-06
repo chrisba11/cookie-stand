@@ -36,13 +36,23 @@ td {
 }
 
 th {
-  background: rgba(182, 96, 63, 0.788);
+  background: rgb(175, 103, 74);
   color: white;
   empty-cells: hide;
-  padding: 10px 2px 10px 2px;
-  font-size: 12px;
+  padding: 10px 6px 10px 6px;
+  font-size: 14px;
   border: 1px solid rgb(84, 93, 119);
 
+}
+
+fieldset {
+  margin-top: 20px;
+  margin-left: 350px;
+  margin-right: auto;
+  display: inline-block;
+  padding: 15px;
+  /* width: 500px; */
+  
 }
 
 legend {
@@ -55,10 +65,36 @@ legend {
   border-image: none;
 }
 
+label {
+  float: left;
+  clear: right;
+}
+
+input {
+  margin: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-box-align: end;
+  font-size: 15px;
+  float: left;
+  clear: both;
+}
+
 form {
   font-family: 'Nunito Sans', 'Open Sans Condensed',sans-serif;
   color: white;
+  overflow: hidden;
+}
 
+button {
+  margin-top: 10px;
+  padding: 6px;
+  width: 100px;
+  font-size: 15px;
+  font-weight: bold;
+  float: right;
 }
 
 .fishy {
@@ -70,20 +106,35 @@ form {
 }
 
 #right-fishy {
-  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
 #left-fishy:hover {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  transform: scaleY(-1);
 }
 
 #right-fishy:hover {
-  -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
+td:last-child, tr:last-child {
+  font-weight: bolder;
+}
 
 
+tr:last-child > td:last-child {
+  color: rgb(255, 255, 255);
+  background: rgb(224, 143, 20);
+}
+
+tr:last-child {
+  background: rgb(134, 77, 77);
+}
+
+td:hover {
+  background: rgb(105, 101, 101);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-style: italic;
+}
 

@@ -74,7 +74,7 @@ Store.renderHeader = function() {
     headerRow.appendChild(thElement);
   }
   thElement = document.createElement('th');
-  thElement.textContent = 'Totals';
+  thElement.textContent = 'Daily Totals';
   headerRow.appendChild(thElement);
   cookieTable.prepend(headerRow);
 };
