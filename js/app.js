@@ -4,6 +4,7 @@ var cookieTable = document.getElementById('cookies');
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var newCookieForm = document.getElementById('new-store');
 var grandTotalArray = [];
+Store.allStores = [];
 
 
 // STORE CONSTRTUCTOR FUNCTION
@@ -18,7 +19,6 @@ function Store(name, min, max, avg) {
   Store.allStores.push(this);
 }
 
-Store.allStores = [];
 
 // add new store to table
 
@@ -26,9 +26,9 @@ Store.newStore = function(event) {
   event.preventDefault();
 
   var name = event.target.storename.value;
-  var minCust = event.target.mincustomers.value;
-  var maxCust = event.target.maxcustomers.value;
-  var avgCookies = event.target.averagecookies.value;
+  var minCust = parseInt(event.target.mincustomers.value);
+  var maxCust = parseInt(event.target.maxcustomers.value);
+  var avgCookies = parseFloat(event.target.averagecookies.value);
 
   new Store(name, minCust, maxCust, avgCookies);
 
