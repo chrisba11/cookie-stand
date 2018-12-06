@@ -46,6 +46,7 @@ Store.prototype.render = function() {
   tdElement.textContent = this.storeName;
   trElement.appendChild(tdElement);
   cookieTable.appendChild(trElement);
+  this.totalCookiesPerDay = 0;
 
   for(var i = 0; i < storeHours.length; i++) {
     var randomNumberCookies = Math.floor( (Math.floor( Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour) ) * this.avgCookiePerSale );

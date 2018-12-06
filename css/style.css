@@ -111,10 +111,12 @@ button {
 
 #left-fishy:hover {
   transform: scaleY(-1);
+  transition: 2000ms;
 }
 
 #right-fishy:hover {
   transform: scaleX(1);
+  transition: 2000ms;
 }
 
 td:last-child, tr:last-child {
