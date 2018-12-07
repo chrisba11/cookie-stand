@@ -6,11 +6,12 @@ var newCookieForm = document.getElementById('new-store');
 var grandTotalArray = [];
 Store.allStores = [];
 
-
 // STORE CONSTRTUCTOR FUNCTION
 
-function Store(name, min, max, avg) {
+function Store(name, address, phone, min, max, avg) {
   this.storeName = name;
+  this.storeAddress = address;
+  this.storePhone = phone;
   this.minCustPerHour = min;
   this.maxCustPerHour = max;
   this.avgCookiePerSale = avg;
@@ -30,11 +31,13 @@ Store.newStore = function(event) {
   event.preventDefault();
 
   var name = event.target.storename.value;
+  var address = event.target.storeadd.value;
+  var phone = event.target.storephone.value;
   var minCust = parseInt(event.target.mincustomers.value);
   var maxCust = parseInt(event.target.maxcustomers.value);
   var avgCookies = parseFloat(event.target.averagecookies.value);
 
-  new Store(name, minCust, maxCust, avgCookies);
+  new Store(name, address, phone, minCust, maxCust, avgCookies);
 
   cookieTable.textContent = '';
   Store.renderHeader();
@@ -114,11 +117,11 @@ Store.renderFooter = function() {
 };
 
 
-new Store('1st & Pike', 23, 65, 6.3);
-new Store('SeaTac Airport', 3, 24, 1.2);
-new Store('Seattle Center', 11, 38, 3.7);
-new Store('Capitol Hill', 20, 38, 2.3);
-new Store('Alki', 2, 16, 4.6);
+new Store('1st & Pike', '100 Pike St. Seattle, Wa 98101', '206.818.9504', 23, 65, 6.3);
+new Store('SeaTac Airport', '19568 Pacific Hwy S. SeaTac, Wa 98415', '206.555.9504', 3, 24, 1.2);
+new Store('Seattle Center', '404 Denny Way Seattle, Wa 98105', '253.555.9504', 11, 38, 3.7);
+new Store('Capitol Hill', '1405 Olive St. Seattle, Wa 98111', '425.555.9504', 20, 38, 2.3);
+new Store('Alki', '1002 Delridge Ave. Seattle, Wa 98009', '555.555.9504', 2, 16, 4.6);
 
 Store.renderHeader();
 Store.renderAllStores();
