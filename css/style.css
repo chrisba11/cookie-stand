@@ -56,7 +56,7 @@ h5 {
   display: inline-block;
   font-family: 'dosis', 'Nunito Sans', sans-serif;
   font-size: 26px;
-  color: rgb(211, 174, 173);
+  color: rgb(154, 230, 207);
   text-align: center;
   padding: 10px 35px;
 }
@@ -175,7 +175,7 @@ button {
 }
 
 #left-fishy:hover {
-  transform: scaleY(-1);
+  transform: scaleX(-1);
   transition: 2000ms;
 }
 
