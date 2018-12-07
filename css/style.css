@@ -1,19 +1,83 @@
 
-* {
-  font-family: 'dosis', 'Nunito Sans', 'Open Sans Condensed',sans-serif;
+body {
+  background: rgb(145, 136, 121);
 }
 
-body {
-  background: rgb(110, 102, 87);
+#index-body {
+  text-align: center;
+}
+
+nav#page-heading {
+  text-align: center;
+  margin: 25px;
+}
+
+nav#page-heading ul {
+  display: inline-block;
+  vertical-align: center;
+}
+
+nav#page-heading ul li {
+  display: inline-block;
+  line-height: 40px;
+}
+
+h1 {
+  display: inline-block;
+  font-family: 'dosis', 'Nunito Sans', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 10px 35px;
+  margin-top: 20px;
 }
 
 h2 {
+  display: inline-block;
   font-family: 'dosis', 'Nunito Sans', sans-serif;
   font-size: 45px;
   color: white;
   text-align: center;
-  padding: 15px;
-  
+  padding: 10px 35px;
+}
+
+h4 {
+  display: inline-block;
+  font-family: 'dosis', 'Nunito Sans', sans-serif;
+  font-size: 40px;
+  color: rgb(214, 218, 219);
+  text-align: center;
+  padding: 10px 35px;
+  margin-bottom: 40px;
+}
+
+h5 {
+  display: inline-block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 26px;
+  color: rgb(27, 11, 41);
+  text-align: center;
+  padding: 10px 35px 0px;
+}
+
+h6 {
+  display: inline-block;
+  font-family: 'dosis', 'Nunito Sans', sans-serif;
+  font-size: 30px;
+  background: rgb(172, 194, 187);
+  border: 2px;
+  border-style: groove;
+  color: rgb(36, 23, 23);
+  text-align: center;
+  padding: 10px 35px;
+}
+
+h6:hover {
+  background: rgb(128, 47, 27);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 
 table {
@@ -21,28 +85,35 @@ table {
   border: 2px solid black;
   margin-left: auto;
   margin-right: auto; 
-  padding: 50px;
+  background: white;
 }
 
 td {
-  font-family: 'Nunito Sans', Geneva, Tahoma, sans-serif;
-  padding: 10px;
-  border-radius: 5px;
+  padding:  5px 2px;  
   border: 1px solid rgb(84, 93, 119);
   margin: 10px;
-  background: white;
   text-align: center;
   vertical-align: middle;
+  width: 56px;
+  height: 20px;
+}
+
+td:first-child {
+  width: 120px;
+}
+
+td:last-child {
+  width: 70px;
 }
 
 th {
   background: rgb(175, 103, 74);
   color: white;
   empty-cells: hide;
-  padding: 10px 6px 10px 6px;
+  padding: 5px 2px;
   font-size: 14px;
   border: 1px solid rgb(84, 93, 119);
-
+  vertical-align: middle;
 }
 
 fieldset {
@@ -66,6 +137,7 @@ legend {
 }
 
 label {
+  font-size: 14px;
   float: left;
   clear: right;
 }
@@ -74,12 +146,12 @@ input {
   margin: 6px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
-  -webkit-box-align: end;
   font-size: 15px;
   float: left;
   clear: both;
+  width: 200px;
 }
 
 form {
@@ -98,23 +170,25 @@ button {
 }
 
 .fishy {
-  margin-top: 10px;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
   width: 150px;
 }
 
 #right-fishy {
+  margin-right: auto;
   transform: scaleX(-1);
 }
 
 #left-fishy:hover {
-  transform: scaleY(-1);
+  transform: scaleX(-1);
+  transition: 2000ms;
 }
 
 #right-fishy:hover {
   transform: scaleX(1);
+  transition: 2000ms;
 }
 
 td:last-child, tr:last-child {
@@ -124,17 +198,105 @@ td:last-child, tr:last-child {
 
 tr:last-child > td:last-child {
   color: rgb(255, 255, 255);
-  background: rgb(224, 143, 20);
-}
-
-tr:last-child {
-  background: rgb(134, 77, 77);
+  background: rgb(90, 102, 70);
 }
 
 td:hover {
+  transform: scale(1.6);
+  transition: all .8s ease-in-out;
   background: rgb(105, 101, 101);
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-style: italic;
+
 }
 
+tr:hover {
+  color: white;
+  background: rgb(165, 160, 160);
+}
+
+tr:last-child {
+  color: black;
+  background: rgb(159, 167, 138);
+}
+
+#cookie, #cutter, #shirt, #plush {
+  border: 2px solid rgb(51, 43, 43);
+  display: inline-block;
+  height: 200px;
+}
+
+#index-section {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#shirt {
+  margin: 30px 15px 30px 30px;
+}
+
+#cookie {
+  margin: 30px 30px 30px 15px;
+}
+
+#plush, #cutter {
+  margin: 30px 15px;
+}
+
+#family {
+  width: 500px;
+  border-width: 12px;
+  border-style: ridge;
+}
+
+#chinook {
+  display: inline-block;
+  margin: 20px;
+  width: 200px;
+  border: 7px;
+  border-style: outset;
+  border-color: aquamarine;
+}
+
+#chinook:hover {
+  border-color: rgb(230, 255, 4); 
+}
+
+footer > ul {
+  display: inline-block;
+}
+
+li > ul > li:first-child {
+  color: antiquewhite;
+  font-weight: bold;
+  padding: 5px;
+}
+
+footer > ul > li {
+  font-family: 'Nunito Sans', 'Open Sans Condensed',sans-serif;
+  margin: 40px;
+}
+
+footer > ul > li > ul > li {
+  padding: 5px;
+}
+
+#family-section {
+  margin: 45px;
+}
+
+#family-section p {
+  margin: 20px;
+  color: antiquewhite;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+}
+
+body > p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(92, 133, 66);
+  font-size: 15px;
+}

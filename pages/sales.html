@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis|Nunito+Sans|Open+Sans+Condensed:300" rel="stylesheet">
   </head>
   <body>
-    <section>
-      <h2>
-        <img id="left-fishy" class="fishy" src="../img/salmon.png" alt="Beautiful, delicious looking salmon." title="Beautiful, delicious looking salmon.">
-        Salmon Cookies Sales Data
-        <img id="right-fishy" class="fishy" src="../img/salmon.png" alt="Beautiful, delicious looking salmon." title="Beautiful, delicious looking salmon.">
-      </h2>
-    </section>
+    <nav id="page-heading">
+      <ul>
+        <li><a href="../index.html"><img id="left-fishy" class="fishy" src="../img/salmon.png" alt="Beautiful, delicious looking salmon." title="Click me to get back to the Home Page!"></a></li>
+        <li><h2>Salmon Cookies Sales Data</h2></li>
+        <li><a href="../index.html"><img id="right-fishy" class="fishy" src="../img/salmon.png" alt="Beautiful, delicious looking salmon." title="Click me to get back to the Home Page!"></a></li>
+      </ul>
+    </nav>
     <table id="cookies"></table>
     <form id="new-store">
       <fieldset>
@@ -23,14 +23,20 @@
         <label for="store-name">Store Name</label>
         <input id="store-name" type="text" name="storename" required />
         <br/>
+        <label for="store-address">Store Address</label>
+        <input id="store-address" type="text" name="storeadd" required />
+        <br/>
+        <label for="store-phone">Store Phone Number</label>
+        <input id="store-phone" type="text" name="storephone" required />
+        <br/>
         <label for="min-cust">Minimum Customers Per Hour</label>
-        <input id="min-cust" type="number" step="any" name="mincustomers" required />
+        <input id="min-cust" type="number" min="0" name="mincustomers" required />
         <br/>
         <label for="max-cust">Maximum Customers Per Hour</label>
-        <input id="max-cust" type="number" step="any" name="maxcustomers" required />
+        <input id="max-cust" type="number" min="0" name="maxcustomers" required />
         <br/>
         <label for="avg-cookies">Average # Cookies Per Customer</label>
-        <input id="avg-cookies" type="number" step="any" name="averagecookies" required />
+        <input id="avg-cookies" type="number" min="0" step="0.1" name="averagecookies" required />
         <br/>
         <button>Add Store</button>
       </fieldset>
