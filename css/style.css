@@ -54,11 +54,11 @@ h4 {
 
 h5 {
   display: inline-block;
-  font-family: 'dosis', 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 26px;
-  color: rgb(154, 230, 207);
+  color: rgb(27, 11, 41);
   text-align: center;
-  padding: 10px 35px;
+  padding: 10px 35px 0px;
 }
 
 h6 {
@@ -71,6 +71,13 @@ h6 {
   color: rgb(36, 23, 23);
   text-align: center;
   padding: 10px 35px;
+}
+
+h6:hover {
+  background: rgb(128, 47, 27);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 
 table {
@@ -254,12 +261,17 @@ tr:last-child {
   border-color: aquamarine;
 }
 
+#chinook:hover {
+  border-color: rgb(230, 255, 4); 
+}
+
 footer > ul {
   display: inline-block;
 }
 
 li > ul > li:first-child {
   color: antiquewhite;
+  font-weight: bold;
   padding: 5px;
 }
 
@@ -283,3 +295,8 @@ footer > ul > li > ul > li {
   font-size: 25px;
 }
 
+body > p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(92, 133, 66);
+  font-size: 15px;
+}
