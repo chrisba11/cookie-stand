@@ -1,19 +1,30 @@
 
-* {
-  font-family: 'dosis', 'Nunito Sans', 'Open Sans Condensed',sans-serif;
+body {
+  background: rgb(145, 136, 121);
 }
 
-body {
-  background: rgb(110, 102, 87);
+nav#page-heading {
+  text-align: center;
+  margin: 25px;
+}
+
+nav#page-heading ul {
+  display: inline-block;
+  vertical-align: center;
+}
+
+nav#page-heading ul li {
+  display: inline-block;
+  line-height: 40px;
 }
 
 h2 {
+  display: inline-block;
   font-family: 'dosis', 'Nunito Sans', sans-serif;
   font-size: 45px;
   color: white;
   text-align: center;
-  padding: 15px;
-  
+  padding: 10px 35px;
 }
 
 table {
@@ -21,28 +32,38 @@ table {
   border: 2px solid black;
   margin-left: auto;
   margin-right: auto; 
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 td {
   font-family: 'Nunito Sans', Geneva, Tahoma, sans-serif;
-  padding: 10px;
+  padding:  5px 2px;
   border-radius: 5px;
   border: 1px solid rgb(84, 93, 119);
   margin: 10px;
   background: white;
   text-align: center;
   vertical-align: middle;
+  width: 56px;
+  height: 20px;
+}
+
+td:first-child {
+  width: 120px;
+}
+
+td:last-child {
+  width: 70px;
 }
 
 th {
   background: rgb(175, 103, 74);
   color: white;
   empty-cells: hide;
-  padding: 10px 6px 10px 6px;
+  padding: 5px 2px;
   font-size: 14px;
   border: 1px solid rgb(84, 93, 119);
-
+  vertical-align: middle;
 }
 
 fieldset {
@@ -98,14 +119,14 @@ button {
 }
 
 .fishy {
-  margin-top: 10px;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
   width: 150px;
 }
 
 #right-fishy {
+  margin-right: auto;
   transform: scaleX(-1);
 }
 
@@ -126,11 +147,7 @@ td:last-child, tr:last-child {
 
 tr:last-child > td:last-child {
   color: rgb(255, 255, 255);
-  background: rgb(224, 143, 20);
-}
-
-tr:last-child {
-  background: rgb(134, 77, 77);
+  background: rgb(122, 116, 89);
 }
 
 td:hover {
@@ -138,5 +155,13 @@ td:hover {
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-style: italic;
+}
+
+tr:last-child {
+  background: rgb(134, 77, 77);
+}
+
+tr:hover {
+  background: rgb(165, 126, 126);
 }
 
